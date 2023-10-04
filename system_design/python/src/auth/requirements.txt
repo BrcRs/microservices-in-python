@@ -1,0 +1,7 @@
+pyjwt==2.3.0
+flask==2.0.2
+flask_mysqldb==0.2.0
+python-dotenv
+pylint==2.12.2
+jedi==0.18.1
+Werkzeug==2.2.2
