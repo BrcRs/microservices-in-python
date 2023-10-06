@@ -4,28 +4,27 @@ metadata:
   name: auth
   labels:
     app: auth
-
 spec:
   replicas: 2
   selector:
     matchLabels:
       app: auth
-    strategy:
-      type: RollingUpdate
-      rollingUpdate:
-        maxSurge: 3
-    template:
-      metadata:
-        labels:
-          app: auth
-      spec:
-        containers:
-          - name: auth
-            image: brucer1/auth
-            ports:
-              - containerPort: 5000
-            envFrom:
-              - configMapRef:
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 3
+  template:
+    metadata:
+      labels:
+        app: auth
+    spec:
+      containers:
+        - name: auth
+          image: brucer1/auth
+          ports:
+            - containerPort: 5000
+          envFrom:
+            - configMapRef:
                 name: auth-configmap
-              - secretRef:
+            - secretRef:
                 name: auth-secret

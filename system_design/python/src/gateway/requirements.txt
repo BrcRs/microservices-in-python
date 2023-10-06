@@ -1,0 +1,7 @@
+pika==1.2.0
+flask==2.0.2
+pyMongo==4.0.1
+Werkzeug==2.2.2
+Flask-PyMongo==2.3.0
+requests==2.27.1
+python-dotenv
